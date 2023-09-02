@@ -4,6 +4,9 @@ from django.utils.html import escape
 from django.utils.safestring import mark_safe
 from django.utils.html import format_html
 from blog.models import Post
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 user_model = get_user_model()

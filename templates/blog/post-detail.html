@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 {% load blog_extras %}
+{% cache 3600 recent_posts %}
+    {% recent_posts post %}
+{% endcache %}
 {% block content %}
 <h2>{{ post.title }}</h2>
 {% row %}
